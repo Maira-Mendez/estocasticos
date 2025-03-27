@@ -1,20 +1,19 @@
-import numpy as np # type: ignore # for numerical operations and generating random steps
-import matplotlib.pyplot as plt # type: ignore # for plotting and visualizing the random walks
+import numpy as np
+import matplotlib.pyplot as plt
 
-# Parameters
-n_steps = 100  # Number of steps
+n_pasos = 100  # Numero de pasos
 
-# Generate random steps: +1 or -1
-steps = np.random.choice([-1, 1], size=n_steps)
+# Se generan pasos random: +1 o -1
+pasos = np.random.choice([-1, 1], size=n_pasos)
 
-# Calculate positions
-positions = np.cumsum(steps)
+# Calcular posiciones
+posiciones = np.cumsum(pasos)
 
-# Plot the random walk
+# Graficar el camino aleatorio
 plt.figure(figsize=(10, 6))
-plt.plot(positions, marker='o', linestyle='-', markersize=4)
-plt.title("1D Random Walk")
-plt.xlabel("Step")
-plt.ylabel("Position")
+plt.plot(posiciones, marker='o', linestyle='-', markersize=4)
+plt.title("Camino Aleatorio 1D")
+plt.xlabel("Pasos")
+plt.ylabel("Posición")
 plt.grid(True)
 plt.show()
